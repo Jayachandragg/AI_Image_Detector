@@ -174,8 +174,8 @@ bvae-fake-image-detection/
 |---|---|---|---|---|
 | Sample 01 — GAN male face | ![s01](assets/sample_fake_01.png) | Fake | ✅ FAKE | 94.3% |
 | Sample 02 — GAN female face | ![s02](assets/sample_fake_02.png) | Fake | ✅ FAKE | 91.8% |
-| Sample 03 — Real child face | ![s03](assets/sample_real_01.png) | Real | ✅ REAL | 96.1% |
-| Sample 04 — Real adult female | ![s04](assets/sample_real_02.png) | Real | ✅ REAL | 98.2% |
+| Sample 03 — Real adultface | ![s03](assets/sample_real_01.png) | Real | ✅ REAL | 96.1% |
+| Sample 04 — Real child female | ![s04](assets/sample_real_02.png) | Real | ✅ REAL | 98.2% |
 
 > The model encodes each image into a 128-dimensional latent mean vector μ via the β-VAE encoder, then passes it to a logistic regression classifier — no pixel-level analysis involved.
 
