@@ -115,20 +115,16 @@ data/
   fake/     ← place fake images here
 ```
 
-### 4. Train the β-VAE
+### 4. Launch the notebook
 ```bash
-python train_bvae.py
+jupyter notebook bvae_fake_detection.ipynb
 ```
-
-### 5. Extract latent vectors & train classifier
-```bash
-python train_classifier.py
-```
-
-### 6. Evaluate
-```bash
-python evaluate.py
-```
+Then run all cells top to bottom (`Kernel → Restart & Run All`). The notebook covers the full pipeline end-to-end:
+- Data loading & preprocessing
+- β-VAE training (unsupervised)
+- Latent vector extraction
+- Logistic regression classifier training
+- Evaluation: accuracy, confusion matrix, ROC-AUC
 
 ---
 
@@ -137,16 +133,9 @@ python evaluate.py
 ```
 bvae-fake-image-detection/
 ├── data/
-│   ├── real/
-│   └── fake/
-├── models/
-│   ├── bvae.py           # β-VAE architecture
-│   └── classifier.py     # Logistic regression wrapper
-├── train_bvae.py         # Unsupervised β-VAE training
-├── train_classifier.py   # Latent-space classifier training
-├── evaluate.py           # Metrics, ROC-AUC, confusion matrix
-├── utils/
-│   └── preprocessing.py  # Resize, normalize, dataloader
+│   ├── real/             ← real facial images
+│   └── fake/             ← GAN/diffusion generated images
+├── bvae_fake_detection.ipynb   ← full pipeline notebook
 ├── requirements.txt
 └── README.md
 ```
@@ -194,4 +183,11 @@ bvae-fake-image-detection/
 ## Author
 - JayaChandra Galda
 
-*CSE 455/555 – Introduction to Pattern Recognition
+
+*CSE 455/555 – Introduction to Pattern Recognition*
+
+---
+
+## License
+
+MIT License — free to use and adapt with attribution.
