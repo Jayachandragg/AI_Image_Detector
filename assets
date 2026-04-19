@@ -1,0 +1,13 @@
+mkdir assets
+
+# fake images
+cp 1_boy.png     assets/sample_fake_01.png
+cp 5_girl.png    assets/sample_fake_02.png
+
+# real images
+cp 00003.png     assets/sample_real_01.png
+cp 00059.png     assets/sample_real_02.png
+
+git add assets/ README.md
+git commit -m "Add real vs fake demo samples to README"
+git push
