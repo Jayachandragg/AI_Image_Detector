@@ -200,13 +200,11 @@ bvae-fake-image-detection/
 
 ---
 
-## Authors
-
-- Gayathri Adulla
+## Author
 - JayaChandra Galda
-- Saakketh Gouti
 
-*CSE 455/555 – Introduction to Pattern Recognition, Group 17*
+
+*CSE 455/555 – Introduction to Pattern Recognition*
 
 ---
 
