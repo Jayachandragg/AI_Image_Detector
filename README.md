@@ -1,6 +1,6 @@
 # β-VAE Based Fake Image Detection
 
-> Unsupervised representation learning + latent-space classification to distinguish real vs. AI-generated facial images — achieving **97% accuracy** and **ROC-AUC ≈ 0.996**.
+> Unsupervised representation learning + latent-space classification to distinguish real vs. AI-generated facial images — achieving **98% accuracy** and **ROC-AUC 0.997**.
 
 [![Live Demo](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-blue)](https://huggingface.co/spaces/chandu1083/AI_Image_Check)
 
@@ -18,11 +18,28 @@ This project takes a different approach: train a **β-Variational Autoencoder (�
 
 | Metric | Real | Fake |
 |---|---|---|
-| Precision | 0.98 | 0.94 |
-| Recall | 0.98 | 0.93 |
-| F1-Score | 0.98 | 0.93 |
-| **Overall Accuracy** | **~97%** | |
-| **ROC-AUC** | **≈ 0.996** | |
+| Precision | 0.98 | 0.95 |
+| Recall | 0.98 | 0.97 |
+| F1-Score | 0.98 | 0.96 |
+| **Overall Accuracy** | **~98%** | |
+| **ROC-AUC** | **0.997** | |
+
+### Confusion Matrix
+![Confusion Matrix](assets/confusion_matrix.png)
+
+### ROC Curve
+![ROC Curve](assets/roc_curve.png)
+
+### t-SNE Latent Space Visualization
+The β-VAE learns clearly separable clusters for real vs. fake faces in 128-dimensional latent space — projected to 2D via t-SNE.
+
+![t-SNE](assets/tsne_latent.png)
+
+---
+
+## Research Poster
+
+![Poster](assets/poster.png)
 
 ---
 
@@ -183,7 +200,14 @@ bvae-fake-image-detection/
 
 ---
 
+## Future Work
 
+- Multi-scale β-VAE for higher resolution inputs
+- Perceptual loss functions (VGG-based)
+- Contrastive learning in latent space
+- Extension to video deepfake detection
+
+---
 
 ## References
 
@@ -200,4 +224,5 @@ bvae-fake-image-detection/
 
 *CSE 455/555 – Introduction to Pattern Recognition*
 
+---
 
