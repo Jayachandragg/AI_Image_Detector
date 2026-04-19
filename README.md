@@ -2,6 +2,8 @@
 
 > Unsupervised representation learning + latent-space classification to distinguish real vs. AI-generated facial images — achieving **97% accuracy** and **ROC-AUC ≈ 0.996**.
 
+[![Live Demo](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-blue)](https://huggingface.co/spaces/chandu1083/AI_Image_Check)
+
 ---
 
 ## Overview
@@ -181,14 +183,7 @@ bvae-fake-image-detection/
 
 ---
 
-## Future Work
 
-- Multi-scale β-VAE for higher resolution inputs
-- Perceptual loss functions (VGG-based)
-- Contrastive learning in latent space
-- Extension to video deepfake detection
-
----
 
 ## References
 
@@ -200,14 +195,9 @@ bvae-fake-image-detection/
 
 ---
 
-## Author
+## Authors
 - JayaChandra Galda
-
 
 *CSE 455/555 – Introduction to Pattern Recognition*
 
----
 
-## License
-
-MIT License — free to use and adapt with attribution.
