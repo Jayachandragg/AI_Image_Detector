@@ -161,14 +161,7 @@ bvae-fake-image-detection/
 
 ---
 
-## Future Work
 
-- Multi-scale β-VAE for higher resolution inputs
-- Perceptual loss functions (VGG-based)
-- Contrastive learning in latent space
-- Extension to video deepfake detection
-
----
 
 ## References
 
