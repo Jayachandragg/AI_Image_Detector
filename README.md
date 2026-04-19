@@ -133,12 +133,32 @@ Then run all cells top to bottom (`Kernel → Restart & Run All`). The notebook 
 ```
 bvae-fake-image-detection/
 ├── data/
-│   ├── real/             ← real facial images
-│   └── fake/             ← GAN/diffusion generated images
-├── bvae_fake_detection.ipynb   ← full pipeline notebook
+│   ├── real/                     ← real facial images
+│   └── fake/                     ← GAN/diffusion generated images
+├── assets/
+│   ├── sample_fake_01.png        ← demo: GAN male face
+│   ├── sample_fake_02.png        ← demo: GAN female face
+│   ├── sample_real_01.png        ← demo: real child face
+│   └── sample_real_02.png        ← demo: real adult female
+├── bvae_fake_detection.ipynb     ← full pipeline notebook
 ├── requirements.txt
 └── README.md
 ```
+
+---
+
+## Demo
+
+4 sample predictions — 2 real (FFHQ) and 2 GAN-generated synthetic faces — all correctly classified with high confidence.
+
+| Sample | Image | Ground Truth | Prediction | Confidence |
+|---|---|---|---|---|
+| Sample 01 — GAN male face | ![s01](assets/sample_fake_01.png) | Fake | ✅ FAKE | 94.3% |
+| Sample 02 — GAN female face | ![s02](assets/sample_fake_02.png) | Fake | ✅ FAKE | 91.8% |
+| Sample 03 — Real child face | ![s03](assets/sample_real_01.png) | Real | ✅ REAL | 96.1% |
+| Sample 04 — Real adult female | ![s04](assets/sample_real_02.png) | Real | ✅ REAL | 98.2% |
+
+> The model encodes each image into a 128-dimensional latent mean vector μ via the β-VAE encoder, then passes it to a logistic regression classifier — no pixel-level analysis involved.
 
 ---
 
@@ -161,7 +181,14 @@ bvae-fake-image-detection/
 
 ---
 
+## Future Work
 
+- Multi-scale β-VAE for higher resolution inputs
+- Perceptual loss functions (VGG-based)
+- Contrastive learning in latent space
+- Extension to video deepfake detection
+
+---
 
 ## References
 
@@ -173,11 +200,13 @@ bvae-fake-image-detection/
 
 ---
 
-## Author
+## Authors
+
+- Gayathri Adulla
 - JayaChandra Galda
+- Saakketh Gouti
 
-
-*CSE 455/555 – Introduction to Pattern Recognition*
+*CSE 455/555 – Introduction to Pattern Recognition, Group 17*
 
 ---
 
